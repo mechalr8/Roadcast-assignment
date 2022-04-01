@@ -40,7 +40,7 @@ public class Entry {
     }
 
     public String getAPI() {
-        Log.e("API: ", API);
+//        Log.e("API: ", API);
         return API;
     }
 

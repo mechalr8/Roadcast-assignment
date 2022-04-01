@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.hfad.assignment.jsonData.Entries;
+import com.hfad.assignment.jsonData.Entry;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,8 +35,14 @@ public class ApiCaller implements Callback<Entries> {
     @Override
     public void onResponse(@NonNull Call<Entries> call, Response<Entries> response) {
         if(response.isSuccessful()){
-            Entries entries = response.body();
-            Log.d("On Response Success: ", entries.getEntry().toString());
+            assert response.body() != null;
+            List<Entry> entries = response.body().getEntry();
+            for(Entry e: entries){
+                Log.d("On Response Success: ", e.getAPI() + ", " +
+                        e.getDescription() + ", " + e.getAuth() + ", " +
+                        e.getHTTPS().toString() + ", " + e.getCors() + ", " +
+                        e.getLink() + ", " + e.getCategory());
+            }
         }
         else
             Log.d("On Response: ", "Response not received");
