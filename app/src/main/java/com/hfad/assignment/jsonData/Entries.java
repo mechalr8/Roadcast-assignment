@@ -5,8 +5,8 @@ import android.util.Log;
 import java.util.List;
 
 public class Entries {
-    public int count;
-    public List<Entry> entries;
+    private int count;
+    private List<Entry> entries;
 
     public void setCount(int count) {
         this.count = count;

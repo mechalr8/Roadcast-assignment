@@ -3,13 +3,13 @@ package com.hfad.assignment.jsonData;
 import android.util.Log;
 
 public class Entry {
-    String API;
-    String Description;
-    String Auth;
-    Boolean HTTPS;
-    String Cors;
-    String Link;
-    String Category;
+    private String API;
+    private String Description;
+    private String Auth;
+    private Boolean HTTPS;
+    private String Cors;
+    private String Link;
+    private String Category;
 
     public void setAPI(String API) {
         this.API = API;
