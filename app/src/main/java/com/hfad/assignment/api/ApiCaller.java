@@ -20,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiCaller implements Callback<Entries> {
 
     String endPointUrl = "https://api.publicapis.org/";
+    public List<Entry> entries;
 
     public void start(){
         Gson gson = new GsonBuilder().create();
@@ -36,7 +37,7 @@ public class ApiCaller implements Callback<Entries> {
     public void onResponse(@NonNull Call<Entries> call, Response<Entries> response) {
         if(response.isSuccessful()){
             assert response.body() != null;
-            List<Entry> entries = response.body().getEntry();
+            entries = response.body().getEntry();
             for(Entry e: entries){
                 Log.d("On Response Success: ", e.getAPI() + ", " +
                         e.getDescription() + ", " + e.getAuth() + ", " +

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <string name="category">Category</string>
+    <string name="link">Link</string>
+    <string name="cors">Cors</string>
+    <string name="https">Https</string>
+    <string name="auth">Auth</string>
+    <string name="description">Description</string>
+    <string name="api">API</string>
 </resources>
