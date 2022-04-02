@@ -32,13 +32,14 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.EntryViewHol
 
     @Override
     public void onBindViewHolder(@NonNull EntryViewHolder holder, int position) {
-        holder.api.setText(entry.get(position).toString());
-        holder.description.setText(entry.get(position).toString());
-        holder.auth.setText(entry.get(position).toString());
-        holder.https.setText(entry.get(position).toString());
-        holder.cors.setText(entry.get(position).toString());
-        holder.link.setText(entry.get(position).toString());
-        holder.category.setText(entry.get(position).toString());
+
+        holder.api.setText(entry.get(position).getAPI());
+        holder.description.setText(entry.get(position).getDescription());
+        holder.auth.setText(entry.get(position).getAuth());
+        holder.https.setText(entry.get(position).getHTTPS().toString());
+        holder.cors.setText(entry.get(position).getCors());
+        holder.link.setText(entry.get(position).getLink());
+        holder.category.setText(entry.get(position).getCategory());
     }
 
     @Override
